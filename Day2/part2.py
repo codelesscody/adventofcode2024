@@ -33,12 +33,19 @@ reports = []
 # 1: open file, read each report into separate arrays, close file
 with open("Day2/input") as file:
     for line in file:
-        reports.append(tuple(line.split(None)))
+        reports.append(line.split(None))
 
 # 3: pop a report from the list, 
 for report in reports:
     if is_safe(report):
         safereports = safereports + 1
+    else:
+        for index in range(len(report)):
+            shortreport = report.copy()
+            del shortreport[index]
+            if is_safe(shortreport):
+                safereports = safereports +1
+                break
         
 
 # 4. output result
