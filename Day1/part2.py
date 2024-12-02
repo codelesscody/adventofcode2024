@@ -11,7 +11,7 @@ list1 = []
 list2 = []
 
 # 1: open file, read each list into separate arrays, close file
-with open("Day1/input_part1") as file:
+with open("Day1/input") as file:
     for line in file:
         list1.append(line.split(None)[0])
         list2.append(line.split(None)[1])
