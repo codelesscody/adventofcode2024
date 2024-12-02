@@ -42,4 +42,4 @@ for report in reports:
         
 
 # 4. output result
-print(safereports)
+print("part1 result: " + str(safereports))

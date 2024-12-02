@@ -2,28 +2,7 @@
 
 # reports are SAFE or UNSAFE. SAFE reports are always increasing or decreasing by 1 to 3
 
-def is_safe(report):
-    ascending = False
-    descending = False
-    badreport = False
-    if int(report[0]) > int(report[1]):
-        descending = True
-    elif int(report[0]) < int(report[1]):
-        ascending = True
-    else:
-        badreport = True
-    lastLevel = int(report[0])
-    for level in report[1:]:
-        levint = int(level)
-        if ascending and (levint - lastLevel >= 1) and (levint - lastLevel <= 3):
-            pass
-        elif descending and (lastLevel - levint >= 1) and (lastLevel - levint <= 3):
-            pass
-        else:
-            badreport = True
-            continue
-        lastLevel = levint
-    return not badreport
+from part1 import is_safe
 
 
 # 0: initiialize variables
@@ -49,4 +28,4 @@ for report in reports:
         
 
 # 4. output result
-print(safereports)
+print("part2 result: " + str(safereports))
