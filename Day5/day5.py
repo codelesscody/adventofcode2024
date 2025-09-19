@@ -63,8 +63,9 @@ def fix_update(update, page_pairs):
                     update = update.replace(temp_str, pair[1], 1)
     return update
 
+fixed_middles = []
 for update in incorrect_updates:
     fixed_update = fix_update(update, page_pairs)
     length = len(fixed_update)
-    middles.append(fixed_update[length//2-1:length//2+1])
-print(sum(list(map(int, middles))))
+    fixed_middles.append(fixed_update[length//2-1:length//2+1])
+print(sum(list(map(int, fixed_middles))))
