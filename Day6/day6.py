@@ -1,8 +1,8 @@
 # --- Day 6: Guard Gallivant ---
 
-The input is a map. Each line is a row of the map. Each character is a position in that row.
-A '.' means open ground, a '#' means an obstacle. The guard is marked with an arrow pointing
-in the direction the guard is facing -- '^', 'v', '<', or '>'.
+# The input is a map. Each line is a row of the map. Each character is a position in that row.
+#A '.' means open ground, a '#' means an obstacle. The guard is marked with an arrow pointing
+# in the direction the guard is facing -- '^', 'v', '<', or '>'.
 
 # The guard follows a very strict patrol protocol which involves repeatedly following these steps:
 
